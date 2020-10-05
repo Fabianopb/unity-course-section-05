@@ -140,7 +140,6 @@ MonoBehaviour:
   velocityY: 10
   ballSounds:
   - {fileID: 8300000, guid: 5322e3cb4857142b0bb5d0d66870f404, type: 3}
-  - {fileID: 8300000, guid: 00bb09a889270455faeebdb54bd168a9, type: 3}
   - {fileID: 8300000, guid: 88946dbb1fcb4403f8f9f5c3781570f3, type: 3}
   - {fileID: 8300000, guid: e58e290e2a8e74861aa54f28f452195a, type: 3}
   - {fileID: 8300000, guid: 82c917f4f5bc94fbfbbfcc9233ebd4ee, type: 3}
