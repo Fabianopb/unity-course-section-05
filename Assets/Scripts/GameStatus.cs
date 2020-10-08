@@ -8,7 +8,20 @@ public class GameStatus : MonoBehaviour
     [Range(0.1f, 10.0f)] [SerializeField] float gameSpeed = 1f;
     [SerializeField] int pointsPerBlock = 12;
     [SerializeField] int currentScore = 0;
-    [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] TextMeshProUGUI scoreText = null;
+
+    private void Awake()
+    {
+        int gameStatusCount = FindObjectsOfType<GameStatus>().Length;
+        if (gameStatusCount > 1)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+    }
 
     private void Start()
     {
