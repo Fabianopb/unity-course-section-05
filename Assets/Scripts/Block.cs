@@ -5,7 +5,7 @@ using UnityEngine;
 public class Block : MonoBehaviour
 {
 
-    [SerializeField] AudioClip breakSound;
+    [SerializeField] AudioClip breakSound = null;
 
     Level level;
 
@@ -17,6 +17,7 @@ public class Block : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        FindObjectOfType<GameStatus>().IncreaseScore();
         Destroy();
     }
 
