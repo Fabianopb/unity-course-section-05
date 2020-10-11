@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 4634368533253843128}
   - component: {fileID: 4634368533253843127}
   m_Layer: 0
-  m_Name: UnbreakableBlock
-  m_TagString: Unbreakable
+  m_Name: 2-Hit Breakable
+  m_TagString: Breakable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8d8c84fdf995e4be79a1d9c74d982890, type: 3}
-  m_Color: {r: 0.20412071, g: 0.22091652, b: 0.31132078, a: 0.7882353}
+  m_Color: {r: 0.8867924, g: 0.47066748, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -98,8 +98,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakSound: {fileID: 8300000, guid: 00bb09a889270455faeebdb54bd168a9, type: 3}
   blockSparklesVFX: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}
-  maxHits: 0
-  damageLevelSprites: []
+  maxHits: 2
+  damageLevelSprites:
+  - {fileID: 21300000, guid: 893cd34b8e7654e9b926300b2ba3eead, type: 3}
   timesHit: 0
 --- !u!61 &4634368533253843127
 BoxCollider2D:
