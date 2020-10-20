@@ -26,7 +26,7 @@ public class Paddle : MonoBehaviour
 
     private float GetXPos()
     {
-        if (gameSession.autoPlay)
+        if (gameSession.IsAutoPlayEnabled())
         {
             return ball.transform.position.x;
         } else

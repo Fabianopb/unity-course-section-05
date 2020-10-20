@@ -15,13 +15,13 @@ public class Ball : MonoBehaviour
 
     // references
     AudioSource audioSource;
-    Rigidbody2D rigidbody2D;
+    Rigidbody2D mRigidbody2D;
  
     void Start()
     {
         paddleToBallVector = transform.position - paddle1.transform.position;
         audioSource = GetComponent<AudioSource>();
-        rigidbody2D = GetComponent<Rigidbody2D>();
+        mRigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -37,7 +37,7 @@ public class Ball : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            rigidbody2D.velocity = new Vector2(velocityX, velocityY);
+            mRigidbody2D.velocity = new Vector2(velocityX, velocityY);
             hasStarted = true;
         }
     }
@@ -50,12 +50,12 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Vector2 velocityTweak = new Vector2(Random.Range(0f, randomFactor), Random.Range(0f, randomFactor));
+        Vector2 velocityTweak = new Vector2(Random.Range(0f, randomFactor), Random.Range(-randomFactor, randomFactor));
         if (hasStarted)
         {
             AudioClip clip = ballSounds[Random.Range(0, ballSounds.Length - 1)];
             audioSource.PlayOneShot(clip);
-            rigidbody2D.velocity += velocityTweak;
+            mRigidbody2D.velocity += velocityTweak;
         }
     }
 }

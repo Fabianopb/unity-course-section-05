@@ -48,6 +48,7 @@ MonoBehaviour:
   pointsPerBlock: 12
   currentScore: 0
   scoreText: {fileID: 6183525927219955677}
+  autoPlay: 0
 --- !u!1001 &4220633409476050560
 PrefabInstance:
   m_ObjectHideFlags: 0
