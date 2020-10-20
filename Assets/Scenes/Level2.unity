@@ -1321,7 +1321,7 @@ PrefabInstance:
     - target: {fileID: 2932560200498821788, guid: a588c9af859364a2ba2e2295148d495d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.04
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2932560200498821788, guid: a588c9af859364a2ba2e2295148d495d,
         type: 3}
@@ -2351,6 +2351,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameSession
+      objectReference: {fileID: 0}
+    - target: {fileID: 6712960853410344787, guid: 53435d6aeac114a7691632d295a52926,
+        type: 3}
+      propertyPath: autoPlay
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6712960853410344788, guid: 53435d6aeac114a7691632d295a52926,
         type: 3}

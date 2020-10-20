@@ -9,6 +9,7 @@ public class GameSession : MonoBehaviour
     [SerializeField] int pointsPerBlock = 12;
     [SerializeField] int currentScore = 0;
     [SerializeField] TextMeshProUGUI scoreText = null;
+    [SerializeField] public bool autoPlay = false;
 
     private void Awake()
     {
