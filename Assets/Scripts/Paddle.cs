@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Paddle : MonoBehaviour
 {
-    [SerializeField] float screenWidthInUnits = 16f;
+    [SerializeField] float screenWidthInUnits = 6f;
     [SerializeField] float minX = 1f;
-    [SerializeField] float maxX = 15f;
+    [SerializeField] float maxX = 5f;
 
     Ball ball;
     GameSession gameSession;
@@ -15,6 +15,7 @@ public class Paddle : MonoBehaviour
     {
         ball = FindObjectOfType<Ball>();
         gameSession = FindObjectOfType<GameSession>();
+        Debug.Log("Screen.width " + Screen.width);
     }
 
     void Update()
@@ -31,6 +32,8 @@ public class Paddle : MonoBehaviour
             return ball.transform.position.x;
         } else
         {
+            Debug.Log("Input.mousePosition.x " + Input.mousePosition.x);
+            Debug.Log("Transformed X " + Input.mousePosition.x / Screen.width * screenWidthInUnits);
             return Input.mousePosition.x / Screen.width * screenWidthInUnits;
         }
     }
