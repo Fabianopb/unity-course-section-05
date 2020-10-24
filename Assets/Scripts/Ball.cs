@@ -29,13 +29,12 @@ public class Ball : MonoBehaviour
         if (!hasStarted)
         {
             LockBallToPaddle();
-            LaunchMouseOnClick();
         }
     }
 
-    private void LaunchMouseOnClick()
+    public void Launch()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (!hasStarted)
         {
             mRigidbody2D.velocity = new Vector2(velocityX, velocityY);
             hasStarted = true;
