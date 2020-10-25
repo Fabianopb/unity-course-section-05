@@ -13,8 +13,12 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadStartScene()
     {
-        FindObjectOfType<GameSession>().Reset();
-        SceneManager.LoadScene(0);
+        GameSession gameSession = FindObjectOfType<GameSession>();
+        if (gameSession)
+        {
+            gameSession.Reset();
+        }
+        SceneManager.LoadScene(1);
     }
 
     public void QuitGame()
